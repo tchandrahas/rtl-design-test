@@ -1,0 +1,12 @@
+module position_caluculator(output [23:0] bit_position,
+		            input [7:0] bit_string);
+
+genvar i;
+generate
+	for(i=0;i<7;i=i+1)
+	begin:encoders
+	reg decoded_value = bit_string & (2**i);
+	eight_to_three_encoder encoder_instant(.encoded_value(bit_position[3*i:+3]), .decoded_value(decoded_value));
+	end
+endgenerate
+endmodule

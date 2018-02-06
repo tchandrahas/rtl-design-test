@@ -1,0 +1,36 @@
+C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal.v {1 {vlog -work work -stats=none C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module hamming_weight_cal
+
+Top level modules:
+	hamming_weight_cal
+
+} {} {}} C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_tb.v {1 {vlog -work work -stats=none C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module hamming_weight_cal_tb
+
+Top level modules:
+	hamming_weight_cal_tb
+
+} {} {}} C:/Users/chandu/Documents/hamming_weight_project/eight_to_three_encoder.v {1 {vlog -work work -stats=none C:/Users/chandu/Documents/hamming_weight_project/eight_to_three_encoder.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module eight_to_three_encoder
+
+Top level modules:
+	eight_to_three_encoder
+
+} {} {}} C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx_tb.v {1 {vlog -work work -stats=none C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx_tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module hamming_weight_cal_rx_tb
+
+Top level modules:
+	hamming_weight_cal_rx_tb
+
+} {} {}} C:/Users/chandu/Documents/hamming_weight_project/adder_par.v {1 {vlog -work work -stats=none C:/Users/chandu/Documents/hamming_weight_project/adder_par.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module adder_par
+
+Top level modules:
+	adder_par
+
+} {} {}}

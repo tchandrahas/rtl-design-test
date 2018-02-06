@@ -1,0 +1,83 @@
+module hamming_weight_cal_rx_tb();
+// declare the inputs to the module as reg and outputs of the module as wires
+reg clk = 1'b0;
+reg [7:0] bit_string;
+wire [10:0] hamming_weight;
+// Local variables
+reg [1023:0] total_bit_string = 1024'd2147483648; // start with 2^31 and keep decrementing
+reg [7:0] clk_count = 8'h00;
+
+// Instantiate the hamming_weight_cal_rx module
+hamming_weight_cal_rx dut(.bit_string(bit_string), .hamming_weight(hamming_weight), .clk(clk));
+
+// initial block to generate the clock
+initial
+begin
+ 	forever begin #5; clk = !clk; end
+end
+
+// initial block to generate the clock count
+initial
+begin
+	repeat(16000)
+	begin 
+		#10; 
+		if(clk_count==129) 
+		begin
+			clk_count = 0;
+		end
+	
+		else
+		begin
+			clk_count = clk_count+1;
+		end  
+	end
+end
+
+// initial block to generate the 1024 test vector
+initial 
+begin 
+	repeat(208000) 
+	begin
+		#10; 
+		if(clk_count == 129)
+		begin
+			total_bit_string = total_bit_string - 1;
+		end 
+	end 
+end
+
+// initial block to generate the 8 bit words each time from the 1024
+initial
+begin
+	repeat(208000)
+	begin
+		#10;
+		if(clk_count == 1)
+			begin
+				bit_string = 8'hFF; // Send the Start Word
+			end
+		if(clk_count == 129)
+			begin
+				bit_string = 8'h00; // Send the STOP Word
+			end
+		else if(clk_count > 1)
+			begin
+				bit_string[7:0] = total_bit_string[(clk_count-2)*8+:8];
+			end
+	end
+end
+ 
+// initial block to print the hamming weight from the dut
+initial 
+	begin
+		$monitor("The Accumulated Hamming weight of the %d\n", hamming_weight);
+		$monitor("The total bit string has changed to %d\n",total_bit_string);
+	end
+// initial block to terminate the simulation
+initial
+	begin
+		#2000000;
+		$finish;
+	end
+endmodule

@@ -1,0 +1,57 @@
+module hamming_weight_cal
+#(
+	parameter BIT_STRING_LEN = 8, // hamming weight caluculation done for every byte
+	parameter HAMMING_WEIGHT_LEN = 4 // To accomodate weight values from 0 to 4  
+)
+(
+	output [HAMMING_WEIGHT_LEN-1:0] hamming_weight, 
+	input [BIT_STRING_LEN-1:0] bit_string
+);
+genvar i; // for using in generate loop
+
+// generate loop for all one bit adders 
+generate 
+	for(i=0;i<(BIT_STRING_LEN/2);i=i+1)
+	begin: one_bit_adders
+		wire [1:0] adder_output;
+		adder_par  #(.INPUT_WIDTH(1))  
+				adder_inst 
+				(
+					.adder_output(adder_output),
+					.adder_input0(bit_string[2*i]),
+					.adder_input1(bit_string[(2*i)+1]) 
+				);
+	end
+
+endgenerate
+
+// generate loop for all two bit adders
+generate
+	for(i=0;i<(BIT_STRING_LEN/4);i=i+1)
+	begin: two_bit_adders
+	wire [2:0] adder_output;
+	adder_par #(.INPUT_WIDTH(2))
+			adder_inst
+			(
+				.adder_output(adder_output),
+				.adder_input0(one_bit_adders[2*i].adder_output),
+				.adder_input1(one_bit_adders[(2*i)+1].adder_output)
+			);
+	end
+endgenerate
+
+// generate loop for all three bit adders
+generate
+	for(i=0;i<(BIT_STRING_LEN/8);i=i+1)
+	begin
+		adder_par #(.INPUT_WIDTH(3))
+				adder_inst
+				(
+					.adder_output(hamming_weight),
+					.adder_input0(two_bit_adders[2*i].adder_output),
+					.adder_input1(two_bit_adders[(i)+1].adder_output)
+				);
+	end
+endgenerate
+
+endmodule

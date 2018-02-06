@@ -1,0 +1,136 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+vadder_par
+Z0 !s110 1517942165
+!i10b 1
+!s100 co?9J9aDi9=5MSWUCK97Q2
+I:UVlW@a9B7^XA?7OM>7_J0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/chandu/Documents/hamming_weight_project
+w1517675546
+8C:/Users/chandu/Documents/hamming_weight_project/adder_par.v
+FC:/Users/chandu/Documents/hamming_weight_project/adder_par.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1517942165.000000
+!s107 C:/Users/chandu/Documents/hamming_weight_project/adder_par.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/chandu/Documents/hamming_weight_project/adder_par.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+veight_to_three_encoder
+Z6 !s110 1517942166
+!i10b 1
+!s100 ]iThl<gmB^Q?j4h4kCTnE3
+IXI3T9I4W1?_0hEDZh[bMg2
+R1
+R2
+w1517898488
+8C:/Users/chandu/Documents/hamming_weight_project/eight_to_three_encoder.v
+FC:/Users/chandu/Documents/hamming_weight_project/eight_to_three_encoder.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z7 !s108 1517942166.000000
+!s107 C:/Users/chandu/Documents/hamming_weight_project/eight_to_three_encoder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/chandu/Documents/hamming_weight_project/eight_to_three_encoder.v|
+!s101 -O0
+!i113 1
+R5
+vhamming_weight_cal
+R0
+!i10b 1
+!s100 mc2Q7G3cn3VkhTVG28R2I3
+IEZa=>d[j@69`Q2:Yo89N@2
+R1
+R2
+w1517795007
+8C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal.v
+FC:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal.v|
+!s101 -O0
+!i113 1
+R5
+vhamming_weight_cal_rx
+R6
+!i10b 1
+!s100 1SH?V?hI=6H9_lQfeK3R13
+Io?ojA_?30:EPCgBZjC2JR3
+R1
+R2
+w1517942151
+8C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx.v
+FC:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx.v
+L0 7
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx.v|
+!s101 -O0
+!i113 1
+R5
+vhamming_weight_cal_rx_tb
+R6
+!i10b 1
+!s100 [z8ojM]?>TVULWB:F72`M3
+IjaN:;CN5d:0@QO8>;6:AP0
+R1
+R2
+w1517854252
+8C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx_tb.v
+FC:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_rx_tb.v|
+!s101 -O0
+!i113 1
+R5
+vhamming_weight_cal_tb
+R0
+!i10b 1
+!s100 _`Mje1]_Uj98dfYfhViUk2
+Ihi0:NGL;LeE@o<IJmnbF>0
+R1
+R2
+w1517808001
+8C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_tb.v
+FC:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_tb.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/chandu/Documents/hamming_weight_project/hamming_weight_cal_tb.v|
+!s101 -O0
+!i113 1
+R5

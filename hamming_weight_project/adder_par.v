@@ -1,0 +1,14 @@
+module adder_par
+#(
+	parameter INPUT_WIDTH = 1
+)
+(
+	output reg [INPUT_WIDTH:0] adder_output,
+	input	[INPUT_WIDTH-1:0] adder_input0,
+	input	[INPUT_WIDTH-1:0] adder_input1
+);
+	always@(adder_input0, adder_input1)
+	begin
+		adder_output <= ((INPUT_WIDTH+1)'(adder_input0 + adder_input1)); // assign the sum to the output
+	end
+endmodule
